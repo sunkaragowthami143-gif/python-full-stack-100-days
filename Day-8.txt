@@ -1,13 +1,9 @@
-Other Operators 
-MySQL offers various additional operators for specific purposes.
-BETWEEN: Checks if a value falls within a specific range.
-IN: Checks if a value is present within a list of specified values.
-CASE: Used for conditional expressions and assigning values based on conditions 
-BETWEEN Operator 
+SELECT *
+FROM orders
+WHERE order_date BETWEEN '2024-03-15' AND '2024-03-20';
 
-±This retrieves all orders placed between March 15th, 2024 (inclusive) and March 20th, 2024 (inclusive).
 
-±BETWEEN: 
+BETWEEN: 
 Checks if a value falls within a specific range.
 STEP 1: Create Table
 CREATE TABLE Orders (
@@ -181,6 +177,9 @@ DELETE FROM Orders
 IN Operator 
 This operator checks if a value exists within a specified list of values 
 
+SELECT *
+FROM customers
+WHERE country IN ('USA', 'Canada', 'UK');
 ±This retrieves customer records where the country is either 'USA', 'Canada', or 'UK'.
 
 STEP 1: Create Table
@@ -431,7 +430,6 @@ Q15. Display employees whose names start with 'S'.
 SELECT *
  FROM Emp
  WHERE name LIKE 'S%';
-
 UPDATE Queries
 Q1. Increase salary by 2000 for employees whose names start with 'R'.
 UPDATE Emp
@@ -718,7 +716,7 @@ Q9. Display the current database user.
 SELECT CURRENT_USER();
 
 Q10. Display the current UTC date.
-SELECT UTC_DATE();
+SELECT UTC_DATE();se
 
 Q11. Display the current UTC time.
 SELECT UTC_TIME();
